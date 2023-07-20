@@ -20,6 +20,7 @@ app.post('/notes',(req,res)=>{
 
 app.get('/notes',(req,res)=>{
     res.sendFile(path.join(__dirname,"/public/notes.html"))
+    storage.getNote(req.body).then((note)=>res.json(note)).catch(err)
 })
 app.get("/notes",(req,res)=>{
     fs.readFile("./db/db.json","utf8",(err,data)=>{
