@@ -3,7 +3,7 @@ const path= require('path');
 const fs = require('fs')
 const PORT= process.env.PORT||3001
 const app= express()
-const storage = require("db/storage.js")
+const storage = require("./db/storage")
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
@@ -13,14 +13,14 @@ app.get('/',(req,res)=>{
     res.sendFile(path.join(__dirname,"/public/index.html"))
 })
 
-app.post('/notes',(req,res)=>{
-    storage.addNote(req.body).then((note)=>res.json(note)).catch((err)=>res.status(500).json(err))
+app.post('/api/notes',(req,res)=>{
+    storage.addNote(req.body).then((note)=>res.json(note))
 
 })
 
 app.get('/notes',(req,res)=>{
     res.sendFile(path.join(__dirname,"/public/notes.html"))
-    storage.getNote(req.body).then((note)=>res.json(note)).catch(err)
+    
 })
 app.get("/notes",(req,res)=>{
     fs.readFile("./db/db.json","utf8",(err,data)=>{
