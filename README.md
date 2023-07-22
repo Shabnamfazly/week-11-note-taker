@@ -23,8 +23,8 @@ To create a new note, click on the "New Note" button at the top-right corner. En
 
 
 ## Screenshots
-<img src=".\assets\images\screenshot1.png"/>
-<img src=".\assets\images\screenshot2.png"/>
+<img src="\assets\images\screenshot1.png"/>
+<img src="\assets\images\screenshot2.png"/>
 
 
 
