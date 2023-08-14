@@ -20,6 +20,11 @@ Upon opening the app, you will be presented with the main interface where you ca
 
 To create a new note, click on the "New Note" button at the top-right corner. Enter a title and the content of your note, then click the "Save" icon to save the note.
 
+## Deployment
+
+
+
+https://polar-tor-27456-44a7aba2d888.herokuapp.com/
 
 
 ## Screenshots
